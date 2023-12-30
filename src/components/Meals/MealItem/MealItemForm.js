@@ -1,4 +1,4 @@
-import React, {useState, useRef} from "react";
+import React, { useState, useRef }  from "react";
 import classes from "./MealItemForm.module.css";
 import Input from "../../UI/Input";
 
@@ -18,12 +18,13 @@ const MealItemForm = (props) => {
       ){
         setAmountIsValid(false);
         return;
-      }
+      } 
+      
     props.onAddToCart(enteredAmountNumber); 
   };
   
   return (
-    <form className={classes.form} onSUbmit = {submitHandler}>
+    <form className={classes.form} onSubmit = {submitHandler}>
     
       <Input
       ref = {amountInputRef}
